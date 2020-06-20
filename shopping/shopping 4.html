@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Shopping List</title>
+	<meta charset="utf-8"/>
+	<style>
+		
+	</style>
+</head>
+<body>
+<h1>Our Shopping List</h1>
+<input type="text"/>
+<button onclick="addtolist();">Add item</button>
+<ul>
+	
+</ul>
+<script type="text/javascript">
+	const userin = document.querySelector('input');
+	const btn = document.querySelector('button');
+	const shoplist = document.querySelector('ul');
+	userin.focus();
+
+	function addtolist(){
+		//alert('hi');
+		var item = userin.value;
+		//alert(item);
+		userin.value = '';
+
+		const liItem = document.createElement('li');
+		const btnspan = document.createElement('span');
+		const everyBtn = document.createElement('button');
+		liItem.textContent = item;
+		everyBtn.textContent = "Delete";
+		everyBtn.style.margin = "10px";
+		btnspan.appendChild(everyBtn);
+		liItem.appendChild(btnspan);
+		shoplist.appendChild(liItem);
+		//everyBtn.setAttribute('onclick','this.parentNode.parentNode.remove();');
+		everyBtn.onclick = function(){
+			this.parentNode.parentNode.remove();
+			userin.focus();
+		}
+		userin.focus();
+	}
+</script> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+/*nav ul{
+  text-decoration: none;
+}*/
+
+nav ul li{
+  width: 100px;
+  height: 60px;
+  line-height: 58px;
+  border-radius: 20px;
+  border: solid 1px #000;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
